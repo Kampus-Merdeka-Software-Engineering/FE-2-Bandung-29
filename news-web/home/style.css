@@ -1,7 +1,32 @@
-.topnav{
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: white;
+    overflow: hidden;
     text-align: center;
-    margin-top: 174px;
-    word-spacing: 113px;
+    margin:  174px;
+     /* Center the navigation bar */
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: none; /* Remove the float property */
+    display: inline-block; /* Display the links as blocks */
     color: black;
-    
-}
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: white;
+    color: purple;
+  }
+  
