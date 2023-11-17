@@ -4,8 +4,11 @@
     overflow: hidden;
     text-align: center;
     margin:  174px;
+    word-spacing: 122px;
      /* Center the navigation bar */
   }
+
+  
   
   /* Style the links inside the navigation bar */
   .topnav a {
