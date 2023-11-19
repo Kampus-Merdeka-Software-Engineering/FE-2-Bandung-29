@@ -1,0 +1,75 @@
+h1 {
+    text-align: center;
+  }
+  
+  .content {
+    max-width: 800px;
+    text-align: left;
+    margin: auto;
+  }
+  
+  .simple-ss {
+    width: 800px;
+    height: 300px;
+    background-color: #eeeeee;
+    margin: auto;
+    background-image: url("images/berita01.png");
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      background-position: 0 0;
+    }
+    16.66% {
+      background-position: 0 0;
+    }
+    33.32% {
+      background-position: -800px 0;
+    }
+    49.98% {
+      background-position: -800px 0;
+    }
+    66.64% {
+      background-position: -1600px 0;
+    }
+    83.30% {
+      background-position: -1600px 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .flex-container {
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    justify-content: space-around;
+  }
+  
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 250px;
+  }
+  
+  .gallery:hover {
+    border: 1px solid #777;
+  }
+    
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+    
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
