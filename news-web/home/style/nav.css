@@ -53,6 +53,7 @@ nav {
     justify-content: center;
     padding: 40px 0;
     position: relative;
+    margin-bottom: 20;
 }
 
 nav::after {
@@ -82,10 +83,12 @@ nav ul li a:hover {
     color: black;
 }
 
-nav ul li a:is(:link, :active, :visited).active{
+nav ul li a:link.active,
+nav ul li a:visited.active {
   text-decoration: underline;
   color: #D69EF8;
 }
+
 .menu-toggle {
     display: none;
     flex-direction: column;
