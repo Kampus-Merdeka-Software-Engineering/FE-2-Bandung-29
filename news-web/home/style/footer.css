@@ -126,7 +126,8 @@ footer .container .sec.aboutus h2:before
 {
     width: 100%;
     background: #181818;
-    padding: 8x 100px;
+    padding: 8px 100px;
     text-align: center;
     color: #f00;
+    margin-top: auto;
 }
