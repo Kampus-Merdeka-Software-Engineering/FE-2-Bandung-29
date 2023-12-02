@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css/family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 footer
 {
+   
     position: relative;
     width: 100%;
     height: auto;
@@ -69,9 +70,11 @@ footer .container .sec.aboutus h2:before
     text-decoration: none;
     border-radius: 4px;
 }
+
+
 .social a:hover
 {
-    background: #f00;
+    background: #D69EF8;
 }
 .quicklinks
 {
@@ -89,10 +92,12 @@ footer .container .sec.aboutus h2:before
     margin-bottom: 10px;
     display: inline-block;
 }
+
 .quicklinks ul li a:hover 
 {
-    color: #f00;
+    color:#D69EF8 ;
 }
+
 .contact .info
 {
     position: relative;
@@ -120,7 +125,8 @@ footer .container .sec.aboutus h2:before
 }
 .contact .info li a:hover 
 {
-    color: #f00;
+    color:#D69EF8 ;
+
 }
 .copyrightweb
 {
@@ -128,6 +134,6 @@ footer .container .sec.aboutus h2:before
     background: #181818;
     padding: 8px 100px;
     text-align: center;
-    color: #f00;
+    color: #D69EF8;
     margin-top: auto;
 }

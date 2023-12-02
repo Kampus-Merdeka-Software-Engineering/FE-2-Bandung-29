@@ -1,5 +1,8 @@
 
-  
+  *{
+    font-family: 'Montserrat', sans-serif;
+}
+
   .content {
     max-width: 800px;
     text-align: left;
@@ -11,7 +14,7 @@
     height: 300px;
     background-color: #eeeeee;
     margin: auto;
-    background-image: url("images/berita01.png");
+    background-image: url("https://unsplash.com/photos/a-close-up-of-a-blue-and-black-marble-wgtTcz8R18M");
     animation-name: slide;
     animation-duration: 10s;
     animation-direction: normal;
@@ -71,3 +74,18 @@
     padding: 15px;
     text-align: center;
   }
+
+  .sports-container{
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    justify-content: space-around;
+  }
+
+  .sport-news:hover{
+    border: 1px solid #777;
+  }
+  .column-container {
+   display: flex;
+   margin-bottom: 13px;
+}
