@@ -1,6 +1,6 @@
 
 *{
-  font-family: 'Playfair Display', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
 }
 
   .content {
@@ -76,8 +76,6 @@
   }
 
  
-
-
 
 @media (max-width: 768px) {
   .flex-container {
