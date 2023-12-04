@@ -7,3 +7,7 @@ navLinkEls.forEach(navLinkEl=>()=>{
         navLinkEl.classList.add('active');
     });
 });
+
+
+
+  
