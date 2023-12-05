@@ -52,18 +52,19 @@
 }
 
 .culture-gallery2 {
-    margin: 10px;
-    border: 1px solid #ccc;
-    float: left;
-    display: block;
-    width: 270px;
-  
-  }
-  
-  .culture-gallery2 img {
-    width: 270px;
-    height: auto;
-  }
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  display: block;
+  width: calc(25% - 20px); 
+  text-align: center; 
+}
+
+.culture-gallery2 img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc; 
+}
   
   .culture-gallery2:hover {
     border: 1px solid #777;
