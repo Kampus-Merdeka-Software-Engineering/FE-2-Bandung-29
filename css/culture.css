@@ -2,6 +2,14 @@
   font-family: 'Playfair Display', sans-serif;
 }
 
+.culture-container1{
+  margin: 30px;
+}
+
+.culture-container2{
+  padding: 20;
+  margin: 20px ;
+}
 .culture-gallery1 {
     margin: 5px;
     border: 1px solid #ccc;
