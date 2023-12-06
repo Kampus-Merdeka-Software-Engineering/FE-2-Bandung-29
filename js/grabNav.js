@@ -1,9 +1,10 @@
 // script.js
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Load header content using JavaScript
-    fetch('footer.html')
+    fetch('/widget/navbar.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('footerNews').innerHTML = data;
+            document.getElementById('header-navi').innerHTML = data;
         });
 });
+

@@ -9,7 +9,7 @@ body {
     
 }
 body,head{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
 }
 
 header h4{
@@ -126,8 +126,11 @@ nav ul {
     transform: scale(0);
 }
 
+/* Your existing styles go here */
 
+/* Style for the active link */
 
+  
 @media screen and (max-width: 768px) {
     nav ul {
         width: 60%;

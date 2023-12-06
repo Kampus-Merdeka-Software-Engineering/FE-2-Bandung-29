@@ -1,0 +1,94 @@
+*{
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.culture-container1{
+  margin: 30px;
+}
+
+.culture-container2{
+  padding: 20;
+  margin: 20px ;
+}
+.culture-gallery1 {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 620px;
+    height: 350px;
+  }
+  
+.culture-gallery1 img {
+    width: 380px;
+    height: 350px;
+}
+  
+.culture-gallery1:hover {
+    border: 1px solid #777;
+}
+  
+.culture-desc {
+    padding: 25px;
+    text-align: center;
+}
+
+.culture-gallery4 {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 500px;
+    height: 170px;
+  }
+  
+.culture-gallery4 img {
+    width: 170px;
+    height: 170px;
+}
+  
+.culture-gallery4:hover {
+    border: 1px solid #777;
+}
+
+.culture-gallery2 {
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  display: block;
+  width: calc(25% - 20px); 
+  text-align: center; 
+}
+
+.culture-gallery2 img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc; 
+}
+  
+  .culture-gallery2:hover {
+    border: 1px solid #777;
+  }
+  
+  .culture-desc {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .culture-gallery5 {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 500px;
+    height: 108px;
+  }
+  
+.culture-gallery5 img {
+    width: 108px;
+    height: 108px;
+}
+  
+.culture-gallery5:hover {
+    border: 1px solid #777;
+}

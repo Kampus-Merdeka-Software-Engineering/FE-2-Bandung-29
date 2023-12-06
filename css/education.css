@@ -1,0 +1,85 @@
+*{
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.education-gallery1 {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 620px;
+    height: 350px;
+  }
+  
+.education-gallery1 img {
+    width: 380px;
+    height: 350px;
+}
+  
+.education-gallery1:hover {
+    border: 1px solid #777;
+}
+  
+.education-desc {
+    padding: 25px;
+    text-align: center;
+}
+
+.education-gallery4 {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 500px;
+    height: 170px;
+  }
+  
+.education-gallery4 img {
+    width: 170px;
+    height: 170px;
+}
+  
+.education-gallery4:hover {
+    border: 1px solid #777;
+}
+
+.education-gallery2 {
+    margin: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 270px;
+  
+  }
+  
+  .education-gallery2 img {
+    width: 270px;
+    height: auto;
+  }
+  
+  .education-gallery2:hover {
+    border: 1px solid #777;
+  }
+  
+  .education-desc {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .education-gallery5 {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 500px;
+    height: 108px;
+  }
+  
+.education-gallery5 img {
+    width: 108px;
+    height: 108px;
+}
+  
+.education-gallery5:hover {
+    border: 1px solid #777;
+}
