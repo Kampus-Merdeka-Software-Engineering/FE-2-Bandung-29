@@ -1,64 +1,55 @@
-
-*{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Playfair Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-footer
-{
-   
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 50px 100px;
+footer {
     background: #d1d0d0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    /* margin-top: auto; */
+    padding: 50px 100px;
 }
-footer .container
-{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-footer .container .sec
-{
-    margin-right: 30 px;
+
+.sec {
+    margin-right: 30px;
 }
-footer .container .sec.aboutus
-{
+
+.aboutus {
     width: 40%;
 }
-footer .container h2
-{
+
+h2 {
     position: relative;
     color: #111111;
     font-weight: 500;
     margin-bottom: 15px;
 }
-footer .container .sec.aboutus h2:before 
-{
+
+.aboutus h2:before {
     content: '';
     position: absolute;
-    bottom : -5px;
-    left : 0;
+    bottom: -5px;
+    left: 0;
     width: 50px;
     height: 2px;
-    background: #f00;
+    background: #D69EF8;
 }
-.social
-{
+
+.social {
     margin-top: 20px;
     display: flex;
 }
-.social a
-{
+
+.social a {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -71,67 +62,63 @@ footer .container .sec.aboutus h2:before
     border-radius: 4px;
 }
 
-
-.social a:hover
-{
+.social a:hover {
     background: #D69EF8;
 }
-.quicklinks
-{
-    position: relative;
+
+.quicklinks {
     width: 25%;
 }
-.quicklinks ul li
-{
+
+.quicklinks ul li {
     list-style: none;
 }
-.quicklinks ul li a
-{
+
+.quicklinks ul li a {
     color: #0e0d0d;
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
 }
 
-.quicklinks ul li a:hover 
-{
-    color:#D69EF8 ;
+.quicklinks ul li a:hover {
+    color: #D69EF8;
 }
 
-.contact .info
-{
+.contact {
+    width: 25%;
+}
+
+.info {
     position: relative;
 }
-.contact .info li
-{
+
+.info li {
     display: flex;
     margin-bottom: 16px;
 }
-.contact .info li span:nth-child(1)
-{
+
+.info li span:nth-child(1) {
     color: rgb(12, 12, 12);
     font-size: 20px;
     margin-right: 10px;
 }
-.contact .info li span
-{
-    color: #080808;
 
+.info li span {
+    color: #080808;
 }
-.contact .info li a
-{
+
+.info li a {
     color: #080808;
     text-decoration: none;
 }
-.contact .info li a:hover 
-{
-    color:#D69EF8 ;
 
+.info li a:hover {
+    color: #D69EF8;
 }
-.copyrightweb
-{
-    width: 100%;
-    background: #181818;
+
+.copyrightweb {
+
     padding: 8px 100px;
     text-align: center;
     color: #D69EF8;
