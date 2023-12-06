@@ -3,48 +3,61 @@
     font-family: 'Playfair Display', sans-serif;
 }
 
-  .content {
-    max-width: 800px;
-    text-align: left;
-    margin: auto;
-  }
-  
-  .simple-ss {
-    width: 600px;
-    height: 300px;
-    background-color: #eeeeee;
-    margin: auto;
-    background-image: url("https://unsplash.com/photos/a-close-up-of-a-blue-and-black-marble-wgtTcz8R18M");
-    animation-name: slide;
-    animation-duration: 10s;
-    animation-direction: normal;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-  }
-  
-  @keyframes slide {
-    0% {
-      background-position: 0 0;
-    }
-    16.66% {
-      background-position: 0 0;
-    }
-    33.32% {
-      background-position: -800px 0;
-    }
-    49.98% {
-      background-position: -800px 0;
-    }
-    66.64% {
-      background-position: -1600px 0;
-    }
-    83.30% {
-      background-position: -1600px 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
+.carousel-container {
+  padding-top: 80px;
+  width: 848px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  height: 328px;
+}
+
+.carousel-item img{
+  width: 848px;
+  height: 328px;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.3; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-button:hover{
+  background-color: #D69EF8;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
   
   .flex-container {
     display: flex;
