@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     // Fetch CSS content
-    fetch('./css/style.css') // Adjust the path to your CSS file
+    fetch('./css/latest.css') // Adjust the path to your CSS file
         .then(response => response.text())
         .then(cssData => {
             // Create a <style> element and append the CSS content
