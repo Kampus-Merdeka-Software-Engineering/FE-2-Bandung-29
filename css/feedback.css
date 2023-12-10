@@ -1,8 +1,8 @@
-*{
+* {
     font-family: 'Playfair Display', sans-serif;
-  }
+}
+
 body {
-    /* font-family: Arial, sans-serif; */
     background-color: #f4f4f4;
     margin: 0;
     display: flex;
@@ -70,4 +70,11 @@ input[type="submit"]:hover {
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    #feedback-form {
+        width: 100%;
+        padding: 10px;
+    }
 }
