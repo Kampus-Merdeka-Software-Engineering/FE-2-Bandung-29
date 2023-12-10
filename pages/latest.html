@@ -9,143 +9,51 @@
     <script src="../js/grabFooter.js"></script>
     <script src="../js/activePage.js"></script>
     <script src="../js/carrousel.js"></script>
+    <script src="../js/fetchApi.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
 </head>
 <body>
     <header id="header-navi"></header>
 
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="carousel-item"><img src="../images/berita01.png" alt="Slide 1"></div>
-        <div class="carousel-item"><img src="../images/berita01.png" alt="Slide 2"></div>
-        <div class="carousel-item"><img src="../images/berita01.png" alt="Slide 3"></div>
+    <div class="carousel-container" >
+      <div class="carousel" id="news-carrousel">
       </div>
       <button class="carousel-button prev" onclick="prevSlide()">❮</button>
       <button class="carousel-button next" onclick="nextSlide()">❯</button>
     </div>
    
          
-    <div class="flex-container">
-        <div class="gallery">
-            <img src="../images/berita01.png" alt="" width="600" height="400">
-            <div class="desc">Add a description of the image here</div>
-        </div>
-
-        <div class="gallery">
-          <img src="../images/berita01.png" alt="" width="600" height="400">
-          <div class="desc">Add a description of the image here</div>
-        </div>
-
-        <div class="gallery">
-          <img src="../images/berita01.png" alt="" width="600" height="400">
-          <div class="desc">Add a description of the image here</div>
-        </div>
-
-        <div class="gallery">
-          <img src="../images/berita01.png" alt="" width="600" height="400">
-          <div class="desc">Add a description of the image here</div>
-      </div>
-    </div>
-
-    <div class="flex-container">
-      <div class="gallery">
-        <img src="../images/berita01.png" alt="" width="600" height="400">
-        <div class="desc">Add a description of the image here</div>
-      </div>
-
-      <div class="gallery">
-        <img src="../images/berita01.png" alt="" width="600" height="400">
-        <div class="desc">Add a description of the image here</div>
-      </div>
-
-      <div class="gallery">
-        <img src="../images/berita01.png" alt="" width="600" height="400">
-        <div class="desc">Add a description of the image here</div>
-      </div>
-
-      <div class="gallery">
-        <img src="../images/berita01.png" alt="" width="600" height="400">
-        <div class="desc">Add a description of the image here</div>
-      </div>
-    </div>
+    <div class="flex-container latest-news"></div>
+    <div class="flex-container latest-news"></div>
 
     <!-- sports -->
     <h4 class="news-type">SPORTS</h4>
     <div class="sports-container">
-      <div class="sport-news">
-        <img src="../images/berita01.png" alt="" >
-        <div class="sport-desc">Add a description of the image here</div>
+      <div class="headline sport-news">
       </div>
-      <div class="column-container">
-        <div class="row-content">
-          <img src="../images/berita01.png" alt="">
-          <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-        </div>
+      <div class="column-container sport-latest">
 
-        <div class="row-content">
-            <img src="../images/berita01.png" alt="">
-            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-          </div>
-
-          <div class="row-content">
-            <img src="../images/berita01.png" alt="" >
-            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-          </div>
-    </div>
-    </div>
+      </div>
+  </div>
+  
 
     <!-- business -->
     <h4 class="news-type">BUSINESS</h4>
     <div class="business-container">
      
-      <div class="column-container">
-        <div class="row-content">
-          <img src="../images/berita01.png" alt="">
-          <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-        </div>
-
-        <div class="row-content">
-            <img src="../images/berita01.png" alt="">
-            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-          </div>
-
-          <div class="row-content">
-            <img src="../images/berita01.png" alt="" >
-            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-          </div>
+      <div class="column-container business-latest">
+      
     </div>
-    <div class="business-news">
-      <img src="../images/berita01.png" alt="" >
-      <div class="sport-desc">Add a description of the image here</div>
+    <div class="headline business-news">
+  
     </div>
     </div>
 
     <h4 class="news-type">EDUCATION</h4>
     <div class="education-container">
-      <div class="sport-news">
-        <img src="../images/berita01.png" alt="" >
-        <div class="sport-desc">Add a description of the image here</div>
+      <div class="headline edu-news">
       </div>
-      <div class="edu-container">
-        <div class="edu-content">
-          <img src="../images/berita01.png" alt="">
-          <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-        </div>
-
-        <div class="edu-content">
-          <img src="../images/berita01.png" alt="">
-          <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-        </div>
-
-        <div class="edu-content">
-          <img src="../images/berita01.png" alt="">
-          <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-        </div>
-
-        <div class="edu-content">
-          <img src="../images/berita01.png" alt="">
-          <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-        </div>
+      <div class="edu-container edu-latest"> </div>
       </div>
     </div>
 

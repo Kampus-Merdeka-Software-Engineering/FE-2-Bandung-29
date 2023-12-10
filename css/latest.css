@@ -12,9 +12,16 @@
   height: 328px;
 }
 
-.carousel-item img{
+/* .carousel-item img{
   width: 848px;
   height: 328px;
+} */
+
+.carousel-image {
+    width: 100%; /* Set the width to fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 300px; /* Set the maximum height if needed */
+    object-fit: cover; /* Ensure the image covers the entire space */
 }
 .carousel {
   display: flex;
@@ -175,13 +182,16 @@
   grid-template-columns: auto auto;
   gap: 20px;
 }
-
+.edu-news img {
+  width: 556px;
+  height: 350px;
+}
 .edu-content{
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
   display: block;
-  width: 250px;
+  width: 100px;
 }
 
 .edu-content img{
