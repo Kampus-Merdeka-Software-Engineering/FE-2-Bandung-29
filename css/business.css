@@ -17,10 +17,17 @@
     position: relative;
     height: 328px;
   }
+
+  .carousel-image {
+    width: 100%; 
+    height: auto; 
+    max-height: 300px; 
+    object-fit: cover; 
+}
   
-  .carousel-item img{
-    width: 848px;
-    height: 328px;
+  .carousel img {
+    width: 100%;
+    height: auto;
   }
   .carousel {
     display: flex;
@@ -101,12 +108,12 @@
     flex-direction: column;
   }
 
-  .sports-container{
+  .businness-container{
     flex-direction: column;
     padding-bottom: 40px;
   }
 
-  .sport-news img{
+  .business-news img{
     width: 288px;
     height: 175px;
   }

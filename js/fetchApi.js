@@ -1,19 +1,26 @@
 
-const apiUrl = 'https://aware-slip-newt.cyclic.app/';
+const apiUrl = 'https://be-2-bandung-29-production.up.railway.app';
 
 document.addEventListener("DOMContentLoaded", async () => {
     const allowedPaths = ["latest.html", "sports.html", "business.html"];
+    const Firstpath = ["latest.html", "index.html"]
 
     if (allowedPaths.some(path => window.location.pathname.includes(path))) {
         // await fetchAllNews();
         await carrouselNews();
         await fetchAllNews();
-    }if(window.location.pathname.includes("latest.html")){
+    }if(Firstpath.some(path => window.location.pathname.includes(path))){
         await latestNews();
-        await latestSPRTS("Sports")
-        await latestBSNS("Business")
-        await latestEDU("Education")
+        await latestSPRTS()
+        await latestBSNS()
+        await latestEDU()
+    }if(window.location.pathname.includes("business.html")){
+        await businessNews()
+    }if(window.location.pathname.includes("sports.html")){
+        await sportNews()
     }
+
+
 
 
 });
@@ -46,7 +53,7 @@ async function carrouselNews() {
         const shuffledCarrousel = shuffleArray(carrousel);
 
         const slideNews = document.getElementById("news-carrousel");
-        shuffledCarrousel.slice(0, 2).forEach((slide) => {
+        shuffledCarrousel.slice(0, 3).forEach((slide) => {
             const div = document.createElement("div");
             div.innerHTML = `
                 <div class="carousel-item">
@@ -89,16 +96,17 @@ async function latestNews() {
     }
 }
 
-async function latestSPRTS(name) {
+async function latestSPRTS() {
     try {
-        const response = await fetch(`${apiUrl}/category?name=${encodeURIComponent(name)}`);
+        const response = await fetch(`${apiUrl}/category`);
         const latest = await response.json();
-        const shuffledLatest = shuffleArray([...latest]);
+        const SPRTSItems = latest.filter(category => category.name === "Sports");
+        const shuffledLatest = shuffleArray([...SPRTSItems]);
         const ltstNwsElements = document.querySelectorAll(".sport-latest");
         const headline = document.querySelectorAll(".sport-news");
 
         Array.from(ltstNwsElements).forEach((ltstNews) => {
-            latest.slice(0, 3).forEach((late) => {
+            shuffledLatest.slice(0, 3).forEach((late) => {
                 const div = document.createElement("div");
                 div.innerHTML = `
                     <div class="row-content">
@@ -111,7 +119,7 @@ async function latestSPRTS(name) {
         });
 
         Array.from(headline).forEach((sports) => {
-            latest.slice(0, 1).forEach((late) => {
+            shuffledLatest.slice(0, 1).forEach((late) => {
                 const div = document.createElement("div");
                 div.innerHTML = `
                     <img src=${late.imageUrl} alt="">
@@ -126,16 +134,17 @@ async function latestSPRTS(name) {
     }
 }
 
-async function latestBSNS(name) {
+async function latestBSNS() {
     try {
-        const response = await fetch(`${apiUrl}/category?name=${encodeURIComponent(name)}`);
+        const response = await fetch(`${apiUrl}/category`);
         const latest = await response.json();
-        const shuffledLatest = shuffleArray([...latest]);
+        const busItems = latest.filter(category => category.name === "Business");
+        const shuffledLatest = shuffleArray([...busItems]);
         const ltstNwsElements = document.querySelectorAll(".business-latest");
         const headline = document.querySelectorAll(".business-news");
 
         Array.from(ltstNwsElements).forEach((ltstNews) => {
-            latest.slice(0, 3).forEach((late) => {
+            shuffledLatest.slice(0, 3).forEach((late) => {
                 const div = document.createElement("div");
                 div.innerHTML = `
                     <div class="row-content">
@@ -147,14 +156,14 @@ async function latestBSNS(name) {
             });
         });
 
-        Array.from(headline).forEach((sports) => {
-            latest.slice(0, 1).forEach((late) => {
+        Array.from(headline).forEach((business) => {
+            shuffledLatest.slice(0, 1).forEach((late) => {
                 const div = document.createElement("div");
                 div.innerHTML = `
                     <img src=${late.imageUrl} alt="">
                     <div class="sport-desc">${late.title}</div>
                 `;
-                sports.appendChild(div); // Fix: Change ltstNews to sports
+                business.appendChild(div); // Fix: Change ltstNews to sports
             });
         });
 
@@ -163,16 +172,17 @@ async function latestBSNS(name) {
     }
 }
 
-async function latestEDU(name) {
+async function latestEDU() {
     try {
-        const response = await fetch(`${apiUrl}/category?name=${encodeURIComponent(name)}`);
+        const response = await fetch(`${apiUrl}/category`);
         const latest = await response.json();
-        const shuffledLatest = shuffleArray([...latest]);
+        const eduItems = latest.filter(category => category.name === "Education");
+        const shuffledEdulatest = shuffleArray([...eduItems]);
         const ltstEDUElements = document.querySelectorAll(".edu-latest");
         const headline = document.querySelectorAll(".edu-news");
 
-        Array.from(ltstEDUElements).forEach((ltstNews) => {
-            latest.slice(0, 4).forEach((late) => {
+        Array.from(ltstEDUElements).forEach((ltstEDU) => {
+            shuffledEdulatest.slice(0, 4).forEach((late) => {
                 const div = document.createElement("div");
                 div.innerHTML = `
                     <div class="row-content">
@@ -180,18 +190,18 @@ async function latestEDU(name) {
                         <div class="desc">${late.title}</div>
                     </div>
                 `;
-                ltstNews.appendChild(div);
+                ltstEDU.appendChild(div);
             });
         });
 
-        Array.from(headline).forEach((sports) => {
-            latest.slice(0, 1).forEach((late) => {
+        Array.from(headline).forEach((edu) => {
+            shuffledEdulatest.slice(0, 1).forEach((late) => {
                 const div = document.createElement("div");
                 div.innerHTML = `
                     <img src=${late.imageUrl} alt="">
                     <div class="sport-desc">${late.title}</div>
                 `;
-                sports.appendChild(div); // Fix: Change ltstNews to sports
+                edu.appendChild(div); // Fix: Change ltstNews to sports
             });
         });
 
@@ -200,4 +210,63 @@ async function latestEDU(name) {
     }
 }
 
+
+async function businessNews() {
+    try {
+        const response = await fetch(`${apiUrl}/category`);
+        const allCategories = await response.json();
+
+        // Filter items where category.name equals "business"
+        const businessItems = allCategories.filter(category => category.name === "Business");
+
+        // Shuffle the filtered items
+        const shuffledBusinessItems = shuffleArray([...businessItems]);
+
+        const bsnsElements = document.querySelectorAll(".business-news");
+
+        Array.from(bsnsElements).forEach((bsnsNews) => {
+            shuffledBusinessItems.slice(0, 3).forEach((bsns) => {
+                const div = document.createElement("div");
+                div.innerHTML = `
+                    <div class="gallery">
+                        <img src=${bsns.imageUrl} alt="" width="600" height="400">
+                        <div class="desc">${bsns.title}</div>
+                    </div>
+                `;
+                bsnsNews.appendChild(div);
+            });
+        });
+    } catch (error) {
+        console.error("Error", error);
+    }
+}
+async function sportNews() {
+    try {
+        const response = await fetch(`${apiUrl}/category`);
+        const allCategories = await response.json();
+
+        // Filter items where category.name equals "business"
+        const sportsItems = allCategories.filter(category => category.name === "Sports");
+
+        // Shuffle the filtered items
+        const shuffledSportItems = shuffleArray([...sportsItems]);
+
+        const sprtsElements = document.querySelectorAll(".sport-news");
+
+        Array.from(sprtsElements).forEach((sprtsNews) => {
+            shuffledSportItems.slice(0, 3).forEach((sprts) => {
+                const div = document.createElement("div");
+                div.innerHTML = `
+                    <div class="gallery">
+                        <img src=${sprts.imageUrl} alt="" width="600" height="400">
+                        <div class="desc">${sprts.title}</div>
+                    </div>
+                `;
+                sprtsNews.appendChild(div);
+            });
+        });
+    } catch (error) {
+        console.error("Error", error);
+    }
+}
 

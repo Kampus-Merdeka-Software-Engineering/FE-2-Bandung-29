@@ -8,7 +8,6 @@
     text-align: left;
     margin: auto;
   }
-  
   .carousel-container {
     padding-top: 80px;
     width: 848px;
@@ -17,7 +16,12 @@
     position: relative;
     height: 328px;
   }
-  
+  .carousel-image {
+    width: 100%; 
+    height: auto; 
+    max-height: 300px; 
+    object-fit: cover; 
+}
   .carousel-item img{
     width: 848px;
     height: 328px;
