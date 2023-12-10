@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const Firstpath = ["latest.html", "index.html"]
 
     if (allowedPaths.some(path => window.location.pathname.includes(path))) {
-        // await fetchAllNews();
+        await fetchAllNews();
         await carrouselNews();
         // await fetchAllNews();
     }if(Firstpath.some(path => window.location.pathname.includes(path))){
@@ -30,15 +30,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 });
 
-// const fetchAllNews = async() =>{
-//     try{
-//         const response = await fetch(`${apiUrl}/category`);
-//         const  category = await response.json();
-//         console.log(category)
-//     }catch (error){
-//         console.error("Error", error)
-//     }
-// }
+const fetchAllNews = async() =>{
+    try{
+        const response = await fetch(`${apiUrl}/category`);
+        const  category = await response.json();
+        console.log(category)
+    }catch (error){
+        console.error("Error", error)
+    }
+}
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
