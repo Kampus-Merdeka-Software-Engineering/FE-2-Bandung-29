@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Fetch HTML content
-    fetch('../pages/latest.html')
+    fetch('./pages/latest.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('first-page').innerHTML = data;
         });
 
     // Fetch CSS content
-    fetch('../css/latest.css') // Adjust the path to your CSS file
+    fetch('./css/latest.css') // Adjust the path to your CSS file
         .then(response => response.text())
         .then(cssData => {
             // Create a <style> element and append the CSS content
